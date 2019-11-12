@@ -1,0 +1,456 @@
+//MainActivity
+
+package com.example.studyroom;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+    }
+
+    public void OnClickedLogin(View v){
+        Intent intent = new Intent(this, SeatStatusActivity.class);
+        startActivity(intent);
+    }
+}
+//activity_main.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center|top"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:text="Study Room"
+        />
+    <TextView
+        android:layout_margin="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+android:textSize="15dp"
+        android:text="시간은 우리가 갖고있는 것 중의 가장 적은 것이다."
+        />
+
+    <ImageView
+        android:layout_margin="30dp"
+        android:src="@drawable/logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+/>
+    <EditText
+        android:hint="학번"
+        android:layout_gravity="center"
+        android:id="@+id/idedit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+/>
+    <EditText
+        android:hint="비밀번호"
+        android:id="@+id/psedit"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="90dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+    <Button
+        android:id="@+id/signup"
+        android:text="Sign up"
+        android:layout_marginRight="30dp"
+        android:layout_width="90dp"
+        android:layout_height="50dp"/>
+        <Button
+            android:onClick="OnClickedLogin"
+            android:id="@+id/login"
+            android:text="Login"
+            android:layout_width="90dp"
+            android:layout_height="50dp"/>
+    </LinearLayout>
+</LinearLayout>
+
+//SeatStatusActivity
+
+package com.example.studyroom;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.view.View;
+
+public class SeatStatusActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_seatstatus);
+    }
+
+    public void OnclickedSeat(View v){
+
+    }
+}
+
+//activity_seatstatus.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="left"
+    android:layout_marginTop="40dp"
+    tools:context=".SeatStatusActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자리 현황"
+        android:textSize="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_gravity="center"/>
+
+<GridLayout
+    android:layout_marginBottom="30dp"
+    android:layout_marginLeft="5dp"
+    android:columnCount="7"
+    android:rowCount="1"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/seat46"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat45"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat44"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat43"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat42"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat41"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+</GridLayout>
+    <GridLayout
+        android:layout_margin="5dp"
+        android:columnCount="7"
+        android:rowCount="1"
+        android:layout_width="300dp"
+        android:layout_height="60dp">
+    <Button
+        android:id="@+id/seat40"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"
+
+        />
+    <Button
+        android:id="@+id/seat39"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat38"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat37"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat36"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat35"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat34"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+    </GridLayout>
+    <GridLayout
+        android:layout_margin="5dp"
+        android:columnCount="7"
+        android:rowCount="1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/seat33"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+    <Button
+        android:id="@+id/seat32"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat31"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat30"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat29"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat28"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat27"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+    </GridLayout>
+    <GridLayout
+
+        android:layout_margin="5dp"
+        android:columnCount="7"
+        android:rowCount="1"
+        android:layout_width="300dp"
+        android:layout_height="60dp">
+    <Button
+        android:id="@+id/seat26"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+    <Button
+        android:id="@+id/seat25"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat24"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat23"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat22"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat21"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat20"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+    </GridLayout>
+    <GridLayout
+        android:layout_margin="5dp"
+        android:columnCount="7"
+        android:rowCount="1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/seat19"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat18"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat17"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat16"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat15"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat14"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat13"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+    </GridLayout>
+    <GridLayout
+        android:layout_margin="5dp"
+        android:columnCount="7"
+        android:rowCount="1"
+        android:layout_width="300dp"
+        android:layout_height="60dp">
+    <Button
+        android:id="@+id/seat12"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat11"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat10"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat9"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat8"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat7"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat6"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+    </GridLayout>
+    <GridLayout
+        android:layout_margin="5dp"
+        android:columnCount="5"
+        android:rowCount="1"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content">
+    <Button
+        android:id="@+id/seat5"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat4"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat3"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat2"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+
+    <Button
+        android:id="@+id/seat1"
+        android:layout_width="40dp"
+        android:layout_height="35dp"
+        android:onClick="OnclickedSeat"/>
+</GridLayout>
+</LinearLayout>
